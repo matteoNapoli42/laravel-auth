@@ -35,5 +35,7 @@
         </div>
 
         <button type="submit" class="btn btn-success my-5">SAVE <a href="{{route('projects.index')}}"></a></button>
+
+        @include('admin.partials.errors')
 </div>
 @endsection

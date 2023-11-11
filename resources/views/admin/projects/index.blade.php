@@ -86,9 +86,9 @@
 
             </tbody>
         </table>
-        
-
     </div>
+    @section('errors')
+    @endsection
 
 
 </div>

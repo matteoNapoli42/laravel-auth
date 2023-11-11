@@ -1,8 +1,10 @@
 @extends('layouts.admin')
 
 @section('content')
-<div class=" container">
+
+<div class="mx-4">
     <h1 class=" text-center">ADMIN INDEX</h1>
+    <a class=" btn btn-primary" href="{{route('projects.create')}}">ADD NEW PROJECT</a>
     <div class=" table-responsive">
         <table class=" table table-light mb-1"> 
             <thead>
@@ -52,7 +54,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="modalTitle">
-                                    DELETE COMIC {{$project->id}}
+                                    DELETE PROJECT {{$project->id}}
                                 </h5>
                                 <button class="btn btn-danger" data-bs-dismiss="modal"></button>
                             </div>
@@ -84,7 +86,7 @@
 
             </tbody>
         </table>
-        <a class=" btn btn-primary" href="{{route('projects.create')}}">ADD NEW COMIC</a>
+        
 
     </div>
 

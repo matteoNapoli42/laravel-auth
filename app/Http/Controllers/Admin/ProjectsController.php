@@ -55,7 +55,7 @@ class ProjectsController extends Controller
      */
     public function edit(Project $project)
     {
-        return view('admin.projects.edit');
+        return view('admin.projects.edit', compact('project'));
     }
 
     /**

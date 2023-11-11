@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>admin</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="/resources/scss/app.scss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -56,7 +56,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('dashboard') }}">{{__('Dashboard')}}</a>
+                            <a class="dropdown-item" href="{{ url('admin') }}">{{__('Dashboard')}}</a>
                             <a class="dropdown-item" href="{{ url('profile') }}">{{__('Profile')}}</a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                  document.getElementById('logout-form').submit();">
@@ -74,8 +74,9 @@
         </div>
     </nav>
     <div class="d-flex vh-100">
-        <div class="col-1 d-flex flex-column" style="background-color:black; width:13%">
-            <ul class="nav flex-column">
+        <div class="col-1 d-flex flex-column p-3" style="background-color:black; width:13%">
+            <h4 class=" text-white">Laravel Auth</h4>
+            <ul class="nav flex-column ">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"></a>
                 </li>

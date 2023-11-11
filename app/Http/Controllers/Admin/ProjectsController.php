@@ -37,8 +37,11 @@ class ProjectsController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $validated = $request->validated();
+        if ($request->has('thumb')) {
+            $file_path = Storage::put('thumbs', $request->thumb);
+            $validated['thumb'] = $file_path;
+        }
         $newProject = Project::create($validated);
-        $newProject->save();
         return to_route('projects.index')->with('message', 'Project created successfully');
     }
 
@@ -64,6 +67,13 @@ class ProjectsController extends Controller
     public function update(UpdateProjectRequest $request, Project $project)
     {
         $data = $request->all();
+        if ($request->has['thumb']) {
+            $newThumb = $request->thumb;
+            $path = Storage::put('thumbs', $newThumb);
+            if (!is_Null($project->thumb) && Storage::fileExists(($project->thumb))) {
+                Storage::delete($project->thumb);
+            }
+        }
         $project->update($data);
         return to_route('projects.index', $project)->with('message', 'Project updated!');
     }

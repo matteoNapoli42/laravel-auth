@@ -56,7 +56,7 @@
                                 <h5 class="modal-title" id="modalTitle">
                                     DELETE PROJECT {{$project->id}}
                                 </h5>
-                                <button class="btn btn-danger" data-bs-dismiss="modal"></button>
+                                <button class="btn btn-danger" data-bs-dismiss="modal">X</button>
                             </div>
                             <div class="modal-body">
                                 <span>Are you sure you want to delete {{$project->title}}?</span>

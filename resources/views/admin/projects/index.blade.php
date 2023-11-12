@@ -81,7 +81,6 @@
                 
                 @empty
                     <h1>No data to show</h1>
-                    
                 @endforelse
 
             </tbody>
